@@ -51,6 +51,8 @@ function logout() {
   if (confirm("All information will be deleted when you delete history.")) {
     localStorage.removeItem(USERNAME_KEY);
     localStorage.removeItem(TODOS_KEY);
+    localStorage.removeItem(DDAYDAY_KEY);
+    localStorage.removeItem(DDAYNAME_KEY);
     window.location.reload();
   }
 }
