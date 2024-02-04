@@ -16,6 +16,14 @@
 .delete__history span {
   font-size: 1.8rem;
   cursor: pointer;
+  padding: 5%;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  &:hover {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.857);
+    color: deeppink;
+  }
 }
 #search-form {
   padding: 0 15px;
@@ -26,14 +34,14 @@
 
 #search-form .material-symbols-outlined {
   font-size: 1.7rem;
-  transition: 0.5s;
-  border-radius: 50%;
-  padding: 10% 0;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+  padding: 10%;
   &:hover {
     cursor: pointer;
     animation: none;
-    box-shadow: 0 0 100px rgba(255, 255, 255, 0.857);
-    color: lemonchiffon;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.857);
+    color: goldenrod;
   }
 }
 #search-form input {
@@ -207,7 +215,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   top: 0;
   right: 0;
   justify-content: flex-end;
-  padding: 2% 1%;
+  padding: 0.5% 1%;
   position: absolute;
   & .add_widget {
     transition: 0.5s ease-in-out;
@@ -220,6 +228,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       justify-content: flex-end;
       align-items: center;
       cursor: pointer;
+      padding: 5% 0;
+      border-radius: 20px;
+      transition: 0.3s ease-in-out;
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+      &:hover {
+        font-variation-settings: "FILL" 1, "wght" 200, "GRAD" 0, "opsz" 48;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.857);
+      }
+      &:first-child:hover {
+        color: cornflowerblue;
+      }
+      &:last-child:hover {
+        color: yellowgreen;
+      }
     }
   }
 }

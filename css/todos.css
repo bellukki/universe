@@ -50,7 +50,7 @@
   &:hover {
     cursor: pointer;
     animation: none;
-    box-shadow: 0 0 100px rgba(255, 255, 255, 0.857);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.857);
     color: lemonchiffon;
   }
 }
