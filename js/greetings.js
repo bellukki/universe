@@ -22,8 +22,20 @@ function onLoginSubmit(event) {
 }
 
 function paintGreetings() {
+  const todayNow = new Date();
+  const hourNow = todayNow.getHours();
   const username = localStorage.getItem(USERNAME_KEY);
-  greetingName.innerText = `Hello ${username} !`;
+  if (hourNow > 5 && hourNow < 11) {
+    greetingName.innerText = `Good Morning, ${username} !`;
+  } else if (hourNow >= 11 && hourNow < 17) {
+    greetingName.innerText = `Good Afternoon, ${username} !`;
+  } else if (hourNow >= 17 && hourNow < 21) {
+    greetingName.innerText = `Good Evening, ${username} !`;
+  } else if (hourNow >= 21 && hourNow <= 24) {
+    greetingName.innerText = `Good Night, ${username} !`;
+  } else {
+    greetingName.innerText = `Welcome, ${username} !`;
+  }
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 

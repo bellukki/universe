@@ -61,7 +61,7 @@
 #greeting {
   position: relative;
   width: 100%;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   font-family: "Oxanium", sans-serif;
   &:hover #change {
