@@ -12,6 +12,47 @@
     gap: 20px;
   }
 }
+.header__left:hover .bg__img {
+  transform: translateY(30px);
+  opacity: 1;
+}
+
+.bg__img {
+  position: absolute;
+  display: flex;
+  width: 10%;
+  top: 2.4%;
+  left: 0;
+  padding: 1% 1.5%;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  align-items: center;
+  & a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  & a:hover span {
+    color: tomato;
+  }
+  & span {
+    height: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 5%;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+    &:hover {
+      opacity: 1;
+      color: cornflowerblue;
+      font-variation-settings: "FILL" 1, "wght" 200, "GRAD" 0, "opsz" 48;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.857);
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+}
 
 .delete__history span {
   font-size: 1.8rem;
