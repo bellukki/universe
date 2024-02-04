@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>🌠Universe</title>
+  </head>
+  <body>
+    <div class="universe">
+      <div class="header paintbg">
+        <div class="header__left">
+          <div class="delete__history">
+            <span class="material-symbols-outlined"> delete_history </span>
+          </div>
+          <div class="search__form">
+            <form
+              id="search-form"
+              action="https://www.google.com/search"
+              type="text"
+              autocomplete="off"
+              method="get"
+            >
+              <label for="search">
+                <span class="material-symbols-outlined"> search </span>
+              </label>
+              <input
+                id="search"
+                required
+                type="text"
+                name="q"
+                maxlength="12"
+                placeholder="Search.."
+              />
+            </form>
+          </div>
+        </div>
+        <div class="header__right">
+          <div class="dday__box">
+            <div class="dday__input">
+              <form id="dday-form" class="hidden">
+                <input id="dday_cal" required type="date" />
+                <input
+                  id="dday_text"
+                  required
+                  maxlength="15"
+                  type="text"
+                  placeholder="D-day name"
+                  autocomplete="off"
+                />
+                <input type="submit" value="Set D-day" />
+              </form>
+            </div>
+            <div class="dday">
+              <div class="dday__main">
+                <span class="hidden"></span>
+                <span class="hidden"></span>
+                <span id="change" class="material-symbols-outlined hidden">
+                  change_circle
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="calendar">
+            <div id="calendarMain">
+              <div class="calendar__year">
+                <span class="hidden"></span>
+                <span class="hidden"></span>
+              </div>
+              <div class="calendar__main">
+                <div class="calendar__day">
+                  <span class="hidden"></span>
+                </div>
+                <div class="calendar__rest">
+                  <span class="hidden"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="weather">
+            <div id="weatherIT">
+              <span></span>
+              <span></span>
+            </div>
+            <div id="weathercity">
+              <span></span>
+            </div>
+          </div>
+          <div class="header__down">
+            <div class="add_widget">
+              <div id="calendarIcon">
+                <span>Calendar</span>
+                <span class="material-symbols-outlined"> calendar_add_on </span>
+              </div>
+              <div id="ddayIcon">
+                <span>D-day</span>
+                <span class="material-symbols-outlined"> calendar_clock </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main paintbg">
+        <div class="main__clock">
+          <span id="clock">00:00:00</span>
+        </div>
+        <div class="main__greeting">
+          <form class="hidden" id="login-form">
+            <input
+              class="input-text"
+              required
+              maxlength="15"
+              type="text"
+              placeholder="What is your name?"
+            />
+            <input id="login__btn" type="submit" value="Log In" />
+          </form>
+          <div id="greeting" class="hidden">
+            <span id="greeting__name"></span>
+            <span id="change" class="material-symbols-outlined">
+              change_circle
+            </span>
+          </div>
+        </div>
+        <div class="todos">
+          <form id="todo-form" class="hidden">
+            <span id="sirius" class="material-symbols-outlined">
+              star_rate
+            </span>
+            <input
+              required
+              type="text"
+              placeholder="Write a To Do and Press Enter"
+              id="todo-input"
+              autocomplete="off"
+            />
+            <label for="todo-input">
+              <span class="material-symbols-outlined">
+                format_ink_highlighter
+              </span>
+            </label>
+          </form>
+          <ul id="todo-list" class="hidden show-scrollbar"></ul>
+        </div>
+      </div>
+      <div class="footer paintbg">
+        <div id="quote">
+          <span></span>
+          <div id="quoteby">
+            <span></span>
+            <span class="material-symbols-outlined"> favorite </span>
+            <span class="material-symbols-outlined"> next_plan </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/greetings.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="./js/apikey.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/dday.js"></script>
+  </body>
+</html>
