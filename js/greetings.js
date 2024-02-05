@@ -44,6 +44,8 @@ function changeClick() {
   localStorage.removeItem(USERNAME_KEY);
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   greeting.classList.add(HIDDEN_CLASSNAME);
+  toDoForm.classList.add(HIDDEN_CLASSNAME);
+  toDoList.classList.add(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit", onLoginSubmit);
 }
 
