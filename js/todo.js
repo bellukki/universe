@@ -1,6 +1,8 @@
 const toDoList = document.getElementById("todo-list");
 const TODOS_KEY = "todos";
 
+const coin = document.querySelector("#coin");
+
 let toDos = [];
 
 function saveToDos() {
@@ -52,6 +54,26 @@ function handleToDoSubmit(event) {
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
+
+function coinFlip(event) {
+  event.preventDefault();
+  const result = Math.floor(Math.random() * 2);
+  let cResult = "";
+  if (result == 1) {
+    cResult = "HEAD ➕";
+  } else {
+    cResult = "TAIL ➖";
+  }
+  const newCoinObj = {
+    text: `${cResult}`,
+    id: Date.now(),
+  };
+  toDos.push(newCoinObj);
+  paintToDo(newCoinObj);
+  saveToDos();
+}
+
+coin.addEventListener("click", coinFlip);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
